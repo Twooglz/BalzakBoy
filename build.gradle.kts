@@ -3,11 +3,10 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
-application.mainClass = "me.twooglz.balzakboy.BalzakBoy" //
-
+application.mainClass = "me.twooglz.balzakboy.Main"
 
 group = "org.example"
-version = "1.5.1"
+version = "1.5.2"
 
 val jdaVersion = "5.0.0-beta.22" //
 
