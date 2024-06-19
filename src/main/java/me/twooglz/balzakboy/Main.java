@@ -9,11 +9,11 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 
-public class BalzakBoy {
+public class Main {
     private static final Dotenv config = Dotenv.configure().load();
     public static JDA api = JDABuilder.createDefault(config.get("TOKEN")).build();
 
-    public static void main (String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         api.awaitReady();
         api.addEventListener(new KickRetard(), new DeathThreat(), new ChannelRenameListener());
 

@@ -1,6 +1,6 @@
 package me.twooglz.balzakboy.commands;
 
-import me.twooglz.balzakboy.BalzakBoy;
+import me.twooglz.balzakboy.Main;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -29,7 +29,7 @@ public class KickRetard extends ListenerAdapter {
 
 
         try {
-            event.getGuild().moveVoiceMember(event.getGuild().getMember(BalzakBoy.api.getUserById(id)), null).queue();
+            event.getGuild().moveVoiceMember(event.getGuild().getMember(Main.api.getUserById(id)), null).queue();
             event.reply(naam + " is weg").setEphemeral(true).queue();
             lastUseTime = System.currentTimeMillis();
         } catch (IllegalArgumentException e) {
