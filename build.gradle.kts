@@ -7,7 +7,7 @@ application.mainClass = "me.twooglz.balzakboy.BalzakBoy" //
 
 
 group = "org.example"
-version = "1.5.0"
+version = "1.5.1"
 
 val jdaVersion = "5.0.0-beta.22" //
 

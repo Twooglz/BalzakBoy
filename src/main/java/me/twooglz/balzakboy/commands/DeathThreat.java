@@ -46,8 +46,15 @@ public class DeathThreat extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (!event.getName().equals("deaththreat")) return;
+
         String id = event.getOption("persoon").getAsMember().getId();
-        event.reply(MessageFormat.format(getRandom(deathThreats), "<@" + id + ">")).queue();
+
+        if (id.equals("763832484965122090") || event.getMember().getId().equals("763832484965122090")) {
+            event.reply("<@763832484965122090> vaderloos").queue();
+        } else {
+            event.reply(MessageFormat.format(getRandom(deathThreats), "<@" + id + ">")).queue();
+        }
+
     }
 
     public static String getRandom(String[] array) {
